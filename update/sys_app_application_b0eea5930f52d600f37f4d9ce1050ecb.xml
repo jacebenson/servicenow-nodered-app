@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sys_app_application">
+    <sys_app_application action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <category/>
+        <description/>
+        <device_type>browser</device_type>
+        <hint/>
+        <name>Node-Red</name>
+        <order/>
+        <roles>x_8821_node.user</roles>
+        <sys_class_name>sys_app_application</sys_class_name>
+        <sys_created_by>admin_SHARE</sys_created_by>
+        <sys_created_on>2016-03-26 20:26:24</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>b0eea5930f52d600f37f4d9ce1050ecb</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Node-Red</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Node-Red" source="x_8821_node">bceee1930f52d600f37f4d9ce1050e43</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Node-Red">bceee1930f52d600f37f4d9ce1050e43</sys_scope>
+        <sys_update_name>sys_app_application_b0eea5930f52d600f37f4d9ce1050ecb</sys_update_name>
+        <sys_updated_by>admin_SHARE</sys_updated_by>
+        <sys_updated_on>2016-03-26 20:26:24</sys_updated_on>
+        <title>Node-Red</title>
+        <view_name/>
+    </sys_app_application>
+</record_update>

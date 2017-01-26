@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_ui_section caption="" section_id="aa722f600fa61a00f37f4d9ce1050e19" sys_domain="global" table="x_8821_node_queue" version="3" view="sys_popup">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.begin_split</element>
+            <position>0</position>
+            <sys_created_by>admin_SHARE</sys_created_by>
+            <sys_created_on>2016-03-31 02:03:49</sys_created_on>
+            <sys_id>6e722f600fa61a00f37f4d9ce1050e19</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_8821_node_queue" sys_domain="global" view="c7402b100a0a0b8400cf971d83ee4384">aa722f600fa61a00f37f4d9ce1050e19</sys_ui_section>
+            <sys_updated_by>admin_SHARE</sys_updated_by>
+            <sys_updated_on>2016-03-31 02:03:49</sys_updated_on>
+            <sys_user/>
+            <type>.begin_split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>status</element>
+            <position>1</position>
+            <sys_created_by>admin_SHARE</sys_created_by>
+            <sys_created_on>2016-03-31 02:03:49</sys_created_on>
+            <sys_id>ae722f600fa61a00f37f4d9ce1050e19</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_8821_node_queue" sys_domain="global" view="c7402b100a0a0b8400cf971d83ee4384">aa722f600fa61a00f37f4d9ce1050e19</sys_ui_section>
+            <sys_updated_by>admin_SHARE</sys_updated_by>
+            <sys_updated_on>2016-03-31 02:03:49</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>sys_created_on</element>
+            <position>2</position>
+            <sys_created_by>admin_SHARE</sys_created_by>
+            <sys_created_on>2016-03-31 02:03:49</sys_created_on>
+            <sys_id>ee722f600fa61a00f37f4d9ce1050e19</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_8821_node_queue" sys_domain="global" view="c7402b100a0a0b8400cf971d83ee4384">aa722f600fa61a00f37f4d9ce1050e19</sys_ui_section>
+            <sys_updated_by>admin_SHARE</sys_updated_by>
+            <sys_updated_on>2016-03-31 02:03:49</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>3</position>
+            <sys_created_by>admin_SHARE</sys_created_by>
+            <sys_created_on>2016-03-31 02:03:49</sys_created_on>
+            <sys_id>22722f600fa61a00f37f4d9ce1050e1a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_8821_node_queue" sys_domain="global" view="c7402b100a0a0b8400cf971d83ee4384">aa722f600fa61a00f37f4d9ce1050e19</sys_ui_section>
+            <sys_updated_by>admin_SHARE</sys_updated_by>
+            <sys_updated_on>2016-03-31 02:03:49</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>queued</element>
+            <position>4</position>
+            <sys_created_by>admin_SHARE</sys_created_by>
+            <sys_created_on>2016-03-31 02:03:49</sys_created_on>
+            <sys_id>62722f600fa61a00f37f4d9ce1050e1a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_8821_node_queue" sys_domain="global" view="c7402b100a0a0b8400cf971d83ee4384">aa722f600fa61a00f37f4d9ce1050e19</sys_ui_section>
+            <sys_updated_by>admin_SHARE</sys_updated_by>
+            <sys_updated_on>2016-03-31 02:03:49</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>processed</element>
+            <position>5</position>
+            <sys_created_by>admin_SHARE</sys_created_by>
+            <sys_created_on>2016-03-31 02:03:49</sys_created_on>
+            <sys_id>a2722f600fa61a00f37f4d9ce1050e1a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_8821_node_queue" sys_domain="global" view="c7402b100a0a0b8400cf971d83ee4384">aa722f600fa61a00f37f4d9ce1050e19</sys_ui_section>
+            <sys_updated_by>admin_SHARE</sys_updated_by>
+            <sys_updated_on>2016-03-31 02:03:49</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.end_split</element>
+            <position>6</position>
+            <sys_created_by>admin_SHARE</sys_created_by>
+            <sys_created_on>2016-03-31 02:03:49</sys_created_on>
+            <sys_id>e2722f600fa61a00f37f4d9ce1050e1a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_8821_node_queue" sys_domain="global" view="c7402b100a0a0b8400cf971d83ee4384">aa722f600fa61a00f37f4d9ce1050e19</sys_ui_section>
+            <sys_updated_by>admin_SHARE</sys_updated_by>
+            <sys_updated_on>2016-03-31 02:03:49</sys_updated_on>
+            <sys_user/>
+            <type>.end_split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>command</element>
+            <position>7</position>
+            <sys_created_by>admin_SHARE</sys_created_by>
+            <sys_created_on>2016-03-31 02:03:49</sys_created_on>
+            <sys_id>26722f600fa61a00f37f4d9ce1050e1a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_8821_node_queue" sys_domain="global" view="c7402b100a0a0b8400cf971d83ee4384">aa722f600fa61a00f37f4d9ce1050e19</sys_ui_section>
+            <sys_updated_by>admin_SHARE</sys_updated_by>
+            <sys_updated_on>2016-03-31 02:03:49</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>response</element>
+            <position>8</position>
+            <sys_created_by>admin_SHARE</sys_created_by>
+            <sys_created_on>2016-03-31 02:03:49</sys_created_on>
+            <sys_id>66722f600fa61a00f37f4d9ce1050e1a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_8821_node_queue" sys_domain="global" view="c7402b100a0a0b8400cf971d83ee4384">aa722f600fa61a00f37f4d9ce1050e19</sys_ui_section>
+            <sys_updated_by>admin_SHARE</sys_updated_by>
+            <sys_updated_on>2016-03-31 02:03:49</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption/>
+            <header>false</header>
+            <name>x_8821_node_queue</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>admin_SHARE</sys_created_by>
+            <sys_created_on>2016-03-31 02:03:49</sys_created_on>
+            <sys_customer_update>true</sys_customer_update>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>aa722f600fa61a00f37f4d9ce1050e19</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_8821_node_queue</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Node-Red" source="x_8821_node">bceee1930f52d600f37f4d9ce1050e43</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Node-Red">bceee1930f52d600f37f4d9ce1050e43</sys_scope>
+            <sys_update_name>sys_ui_section_aa722f600fa61a00f37f4d9ce1050e19</sys_update_name>
+            <sys_updated_by>admin_SHARE</sys_updated_by>
+            <sys_updated_on>2016-03-31 02:03:49</sys_updated_on>
+            <sys_user/>
+            <title>false</title>
+            <view display_value="Sys_popup" name="sys_popup">c7402b100a0a0b8400cf971d83ee4384</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

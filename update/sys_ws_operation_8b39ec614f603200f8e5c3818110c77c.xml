@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_ws_operation">
+    <sys_ws_operation action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <consumes>application/json,application/xml,text/xml</consumes>
+        <consumes_customized>false</consumes_customized>
+        <default_operation_uri/>
+        <enforce_acl/>
+        <http_method>POST</http_method>
+        <name>register</name>
+        <operation_script><![CDATA[(function process(/*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
+
+	// implement resource here
+	var returnObj = {};
+	var name = request.body.data.name;
+	//returnObj.body = request.body.data;
+	var JSON = new global.JSON();
+	var server = new GlideRecord('x_8821_node_server');
+	server.addQuery('name', name);
+	server.query();
+	if(server.next()){
+		//already registered
+		returnObj.message = "Already registered";
+	} else {
+		returnObj.message = "Creating Server";
+		returnObj.server = {
+			name: request.body.data.name,
+			status: request.body.data.status,
+			os: request.body.data.platform,
+			active: true
+		};
+		server.initialize();
+		server.name = returnObj.server.name;
+		server.status = returnObj.server.status;
+		server.os = returnObj.server.os;
+		server.active = returnObj.server.active;
+		returnObj.server.sysid = server.insert();
+	}
+	response.setContentType('application/json');
+	response.getStreamWriter().writeString(JSON.encode(returnObj,'','  '));
+})(request, response);]]></operation_script>
+        <operation_uri>/api/x_8821_node/server/register</operation_uri>
+        <produces>application/json,application/xml,text/xml</produces>
+        <produces_customized>false</produces_customized>
+        <relative_path>/register</relative_path>
+        <request_example/>
+        <requires_acl_authorization>false</requires_acl_authorization>
+        <requires_authentication>true</requires_authentication>
+        <short_description/>
+        <sys_class_name>sys_ws_operation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-01-25 21:25:27</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>8b39ec614f603200f8e5c3818110c77c</sys_id>
+        <sys_mod_count>14</sys_mod_count>
+        <sys_name>register</sys_name>
+        <sys_package display_value="Node-Red" source="x_8821_node">bceee1930f52d600f37f4d9ce1050e43</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Node-Red">bceee1930f52d600f37f4d9ce1050e43</sys_scope>
+        <sys_update_name>sys_ws_operation_8b39ec614f603200f8e5c3818110c77c</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-01-26 04:05:24</sys_updated_on>
+        <web_service_definition display_value="server">323d96840f6ed600f37f4d9ce1050eb0</web_service_definition>
+        <web_service_version/>
+    </sys_ws_operation>
+</record_update>

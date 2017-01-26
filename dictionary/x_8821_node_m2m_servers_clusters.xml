@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="Servers" max_length="40" name="x_8821_node_m2m_servers_clusters" type="collection">
+        <element label="Cluster" max_length="32" name="cluster" reference="x_8821_node_cluster" type="reference"/>
+        <element label="Server" max_length="32" name="server" reference="x_8821_node_server" type="reference"/>
+        <index name="index">
+            <element name="cluster"/>
+        </index>
+        <index name="index2">
+            <element name="server"/>
+        </index>
+    </element>
+</database>
