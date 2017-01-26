@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_documentation element="cli" label="Cli" language="en" table="x_8821_node_queue">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>cli</element>
+            <help/>
+            <hint/>
+            <label>Cli</label>
+            <language>en</language>
+            <name>x_8821_node_queue</name>
+            <plural>Clis</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2017-01-26 05:04:00</sys_created_on>
+            <sys_customer_update>true</sys_customer_update>
+            <sys_id>744252a54f243200f8e5c3818110c70e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Cli</sys_name>
+            <sys_package display_value="Node-Red" source="x_8821_node">bceee1930f52d600f37f4d9ce1050e43</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Node-Red">bceee1930f52d600f37f4d9ce1050e43</sys_scope>
+            <sys_update_name>sys_documentation_x_8821_node_queue_cli_en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2017-01-26 05:04:00</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

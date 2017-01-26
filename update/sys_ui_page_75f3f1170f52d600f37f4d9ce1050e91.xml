@@ -4,11 +4,6 @@
         <category>general</category>
         <client_script><![CDATA[var commandFlow = [
     {
-        "id": "90b668b7.6b07c8",
-        "type": "tab",
-        "label": "Flow 1"
-    },
-    {
         "id": "ab0d29be.8308e8",
         "type": "function",
         "z": "90b668b7.6b07c8",
@@ -51,6 +46,7 @@
         "method": "POST",
         "ret": "obj",
         "url": "",
+        "tls": "",
         "x": 629.765625,
         "y": 54,
         "wires": [
@@ -64,7 +60,7 @@
         "type": "function",
         "z": "90b668b7.6b07c8",
         "name": "Format Payload",
-        "func": "global.set('node_path',msg.payload);\nmsg.headers = global.get(\"headers\");\nmsg.url = global.get(\"endpoint\");\nmsg.url += '/x_8821_node/server/register';\nmsg.node = global.get('node');\nmsg.node.serial = global.get('serial');\nmsg.node.status = 'up';\nmsg.payload = msg.node;\nreturn msg;",
+        "func": "global.set('node_path',msg.payload);\nmsg.headers = global.get(\"headers\");\nmsg.url = global.get(\"instance\");\nmsg.url += '/api/x_8821_node/server/register';\nmsg.node = global.get('node');\nmsg.node.serial = global.get('serial');\nmsg.node.status = 'up';\nmsg.payload = msg.node;\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "x": 621.765625,
@@ -85,11 +81,12 @@
         "append": "",
         "useSpawn": false,
         "name": " Run command",
-        "x": 605.765625,
-        "y": 457,
+        "x": 609.765625,
+        "y": 451,
         "wires": [
             [
-                "453570df.1b001"
+                "453570df.1b001",
+                "9ed1e49.0ee2218"
             ],
             [],
             []
@@ -150,7 +147,8 @@
         "y": 540,
         "wires": [
             [
-                "ab0d29be.8308e8"
+                "ab0d29be.8308e8",
+                "60112594.9c6b5c"
             ]
         ]
     },
@@ -159,14 +157,15 @@
         "type": "function",
         "z": "90b668b7.6b07c8",
         "name": "12.Set record to 'executed'",
-        "func": "function pad(a){\nvar n = a.toString();\nconsole.log('n('+n.length+'): ' + n);\nif(n.length === 1){\nn = '0' + n;\nconsole.log('n -> ' + n);\n}\nreturn n;\n}\nvar d = new Date();\nmsg.payload = {\n 'status':'executed',\n 'processed':d.getFullYear() + '-' + pad((d.getMonth()+1)) + '-' + pad(d.getDate()) + ' ' + pad(d.getHours()) + ':' + pad(d.getMinutes()) + ':' + pad(d.getSeconds()),\n 'response':msg.payload,\n 'server':msg.server\n};\nmsg.headers = global.get(\"headers\");\nmsg.url = global.get(\"endpoint\");\nmsg.url += '/now/table/x_8821_node_queue/';\nmsg.url += msg.sys_id + '?sysparm_fields=';\nmsg.url += 'status,response,server,processed';\nreturn msg;",
+        "func": "function pad(a){\nvar n = a.toString();\nconsole.log('n('+n.length+'): ' + n);\nif(n.length === 1){\nn = '0' + n;\nconsole.log('n -> ' + n);\n}\nreturn n;\n}\nvar d = new Date();\nmsg.payload = {\n 'status':'executed',\n 'processed':d.getFullYear() + '-' + pad((d.getMonth()+1)) + '-' + pad(d.getDate()) + ' ' + pad(d.getHours()) + ':' + pad(d.getMinutes()) + ':' + pad(d.getSeconds()),\n 'response':msg.payload,\n 'server':msg.server\n};\nmsg.headers = global.get(\"headers\");\nmsg.url = global.get(\"instance\");\nmsg.url += '/api/now/table/x_8821_node_queue/';\nmsg.url += msg.sys_id + '?sysparm_fields=';\nmsg.url += 'status,response,server,processed';\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "x": 597.765625,
         "y": 501,
         "wires": [
             [
-                "ffc699f7.34fae8"
+                "ffc699f7.34fae8",
+                "82f21e0f.2d004"
             ]
         ]
     },
@@ -182,7 +181,8 @@
         "y": 370,
         "wires": [
             [
-                "f8d8df5d.9ca2c"
+                "f8d8df5d.9ca2c",
+                "deb78a65.431038"
             ]
         ]
     },
@@ -191,14 +191,15 @@
         "type": "function",
         "z": "90b668b7.6b07c8",
         "name": "09.Set payload to 'in progress'",
-        "func": "function pad(a){\n  var n = a.toString();\n  if(n.length === 1){\n    n = '0' + n;\n  }\n  return n;\n}\nvar d = new Date();\nmsg.payload = {\n 'status':'in progress',\n 'queued':d.getFullYear() + '-' + pad((d.getMonth()+1)) + '-' + pad(d.getDate()) + ' ' + pad(d.getHours()) + ':' + pad(d.getMinutes()) + ':' + pad(d.getSeconds()),\n 'server':msg.server\n};\nmsg.headers = global.get(\"headers\");\nmsg.url = 'https://dev13941.service-now.com/';\nmsg.url += 'api/now/table/x_8821_node_queue/';\nmsg.url += msg.sys_id + '?sysparm_fields=';\nmsg.url += 'status,response,server,processed';\nreturn msg;",
+        "func": "function pad(a){\n  var n = a.toString();\n  if(n.length === 1){\n    n = '0' + n;\n  }\n  return n;\n}\nvar d = new Date();\nmsg.payload = {\n 'status':'in progress',\n 'queued':d.getFullYear() + '-' + pad((d.getMonth()+1)) + '-' + pad(d.getDate()) + ' ' + pad(d.getHours()) + ':' + pad(d.getMinutes()) + ':' + pad(d.getSeconds()),\n 'server':msg.server\n};\nmsg.headers = global.get(\"headers\");\nmsg.url = global.get(\"instance\");\nmsg.url += '/api/now/table/x_8821_node_queue/';\nmsg.url += msg.sys_id + '?sysparm_fields=';\nmsg.url += 'status,response,server,processed';\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "x": 602.765625,
-        "y": 332,
+        "y": 336,
         "wires": [
             [
-                "d306c2e3.a8aec"
+                "d306c2e3.a8aec",
+                "bdf0c2c1.de4fc"
             ]
         ]
     },
@@ -226,14 +227,15 @@
         "type": "function",
         "z": "90b668b7.6b07c8",
         "name": "03.Format request",
-        "func": "msg = {\n headers: global.get(\"headers\")\n};\nmsg.url = global.get(\"endpoint\") + '/x_8821_node/server/all?';\nmsg.url += 'name='+ global.get(\"node\").name;\nreturn msg;",
+        "func": "msg = {\n headers: global.get(\"headers\")\n};\nmsg.url = global.get(\"instance\");\nmsg.url += '/api/x_8821_node/server/all?';\nmsg.url += 'name='+ global.get(\"node\").name;\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "x": 346.765625,
         "y": 163,
         "wires": [
             [
-                "5ea1638b.194a2c"
+                "5ea1638b.194a2c",
+                "7dad2b8a.53cfc4"
             ]
         ]
     },
@@ -245,6 +247,7 @@
         "method": "GET",
         "ret": "obj",
         "url": "",
+        "tls": "",
         "x": 352.765625,
         "y": 202,
         "wires": [
@@ -292,9 +295,9 @@
         "rules": [
             {
                 "t": "set",
-                "p": "endpoint",
+                "p": "instance",
                 "pt": "global",
-                "to": "https://dev17279.service-now.com/api",
+                "to": "https://dev17279.service-now.com",
                 "tot": "str"
             },
             {
@@ -357,11 +360,11 @@
         "id": "c30dac5d.12606",
         "type": "debug",
         "z": "90b668b7.6b07c8",
-        "name": "hostname",
+        "name": "msg",
         "active": false,
         "console": "false",
         "complete": "true",
-        "x": 818.765625,
+        "x": 808.765625,
         "y": 20,
         "wires": []
     },
@@ -370,14 +373,15 @@
         "type": "function",
         "z": "90b668b7.6b07c8",
         "name": "Build command",
-        "func": "if(msg.cli === 'bash/CMD'){\n    msg.payload = msg.command;\n}\nif(msg.cli === 'Node.js CLI'){\n    msg.payload = 'node -e\"' + msg.command + '\"';\n}\nif(msg.cli === 'mysql'){\n    msg.payload = 'node -e \"' + \"var mysql= require('\"+global.get('node_path')+\"mysql');var connection = mysql.createConnection({host:'\"+msg.host+\"',user:'\"+msg.username+\"',password : '\"+msg.password+\"',database:'service'});try{connection.connect();connection.query(\"+msg.sql+\", function(err, rows, fields) {if(err) {console.log('Connect Error: ' + err);}else{console.log(JSON.stringify(rows,null,2));}});connection.end();}catch(e){console.log('Error: ' + e);}\" + '\"';\n}\nreturn msg;",
+        "func": "if(msg.cli === 'bash/CMD'){\n    msg.payload = msg.command;\n}\nif(msg.cli === 'Node.js CLI'){\n    msg.payload = 'node -e\"' + msg.command + '\"';\n}\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "x": 610.765625,
         "y": 409.5,
         "wires": [
             [
-                "bc4edbbf.db8a78"
+                "bc4edbbf.db8a78",
+                "2222e86f.3a5088"
             ]
         ]
     },
@@ -405,10 +409,10 @@
         "type": "debug",
         "z": "90b668b7.6b07c8",
         "name": "",
-        "active": true,
+        "active": false,
         "console": "false",
-        "complete": "payload",
-        "x": 823.63671875,
+        "complete": "true",
+        "x": 803.63671875,
         "y": 62.03515625,
         "wires": []
     },
@@ -417,11 +421,95 @@
         "type": "debug",
         "z": "90b668b7.6b07c8",
         "name": "",
-        "active": true,
+        "active": false,
         "console": "false",
-        "complete": "payload",
-        "x": 855.63671875,
-        "y": 172.046875,
+        "complete": "true",
+        "x": 858.63671875,
+        "y": 191.046875,
+        "wires": []
+    },
+    {
+        "id": "deb78a65.431038",
+        "type": "debug",
+        "z": "90b668b7.6b07c8",
+        "name": "",
+        "active": false,
+        "console": "false",
+        "complete": "true",
+        "x": 859.6328125,
+        "y": 362.04296875,
+        "wires": []
+    },
+    {
+        "id": "bdf0c2c1.de4fc",
+        "type": "debug",
+        "z": "90b668b7.6b07c8",
+        "name": "",
+        "active": false,
+        "console": "false",
+        "complete": "true",
+        "x": 868.63671875,
+        "y": 308.046875,
+        "wires": []
+    },
+    {
+        "id": "7dad2b8a.53cfc4",
+        "type": "debug",
+        "z": "90b668b7.6b07c8",
+        "name": "",
+        "active": false,
+        "console": "false",
+        "complete": "true",
+        "x": 862.640625,
+        "y": 155.04296875,
+        "wires": []
+    },
+    {
+        "id": "60112594.9c6b5c",
+        "type": "debug",
+        "z": "90b668b7.6b07c8",
+        "name": "",
+        "active": false,
+        "console": "false",
+        "complete": "true",
+        "x": 853.625,
+        "y": 532.046875,
+        "wires": []
+    },
+    {
+        "id": "82f21e0f.2d004",
+        "type": "debug",
+        "z": "90b668b7.6b07c8",
+        "name": "",
+        "active": false,
+        "console": "false",
+        "complete": "true",
+        "x": 854.63671875,
+        "y": 490.0390625,
+        "wires": []
+    },
+    {
+        "id": "9ed1e49.0ee2218",
+        "type": "debug",
+        "z": "90b668b7.6b07c8",
+        "name": "",
+        "active": false,
+        "console": "false",
+        "complete": "true",
+        "x": 858.640625,
+        "y": 434.0390625,
+        "wires": []
+    },
+    {
+        "id": "2222e86f.3a5088",
+        "type": "debug",
+        "z": "90b668b7.6b07c8",
+        "name": "",
+        "active": false,
+        "console": "false",
+        "complete": "true",
+        "x": 855.625,
+        "y": 400.03515625,
         "wires": []
     }
 ];
@@ -464,7 +552,7 @@ Pass:	sys.node<br/>
         <sys_created_on>2016-03-26 20:49:04</sys_created_on>
         <sys_customer_update>true</sys_customer_update>
         <sys_id>75f3f1170f52d600f37f4d9ce1050e91</sys_id>
-        <sys_mod_count>32</sys_mod_count>
+        <sys_mod_count>33</sys_mod_count>
         <sys_name>readme</sys_name>
         <sys_package display_value="Node-Red" source="x_8821_node">bceee1930f52d600f37f4d9ce1050e43</sys_package>
         <sys_policy/>
@@ -472,6 +560,6 @@ Pass:	sys.node<br/>
         <sys_scope display_value="Node-Red">bceee1930f52d600f37f4d9ce1050e43</sys_scope>
         <sys_update_name>sys_ui_page_75f3f1170f52d600f37f4d9ce1050e91</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-01-26 04:24:06</sys_updated_on>
+        <sys_updated_on>2017-01-26 05:11:16</sys_updated_on>
     </sys_ui_page>
 </record_update>

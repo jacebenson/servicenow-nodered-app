@@ -61,6 +61,7 @@
 		returnObj.queue.push({
 			sys_id: queue.sys_id.toString(),
 			command: queue.command.toString(),
+			cli: queue.cli.toString(),
 			queue: queue.queue.toString()
 		});
 	}
@@ -81,7 +82,7 @@
         <sys_created_on>2016-03-29 07:46:11</sys_created_on>
         <sys_customer_update>true</sys_customer_update>
         <sys_id>546dd6840f6ed600f37f4d9ce1050e8e</sys_id>
-        <sys_mod_count>25</sys_mod_count>
+        <sys_mod_count>26</sys_mod_count>
         <sys_name>all</sys_name>
         <sys_package display_value="Node-Red" source="x_8821_node">bceee1930f52d600f37f4d9ce1050e43</sys_package>
         <sys_policy/>
@@ -89,7 +90,7 @@
         <sys_scope display_value="Node-Red">bceee1930f52d600f37f4d9ce1050e43</sys_scope>
         <sys_update_name>sys_ws_operation_546dd6840f6ed600f37f4d9ce1050e8e</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-01-26 04:20:25</sys_updated_on>
+        <sys_updated_on>2017-01-26 05:08:49</sys_updated_on>
         <web_service_definition display_value="server">323d96840f6ed600f37f4d9ce1050eb0</web_service_definition>
         <web_service_version/>
     </sys_ws_operation>

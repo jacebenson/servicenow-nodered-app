@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <database>
     <element label="Queue" max_length="40" name="x_8821_node_queue" type="collection">
+        <element choice="1" default="bash/CMD" label="Cli" max_length="40" name="cli" type="choice">
+            <choice>
+                <element label="bash/CMD" sequence="0" value="bash/CMD"/>
+                <element label="Node.js CLI" sequence="1" value="Node.js CLI"/>
+            </choice>
+        </element>
         <element label="Cluster" max_length="32" name="cluster" reference="x_8821_node_cluster" reference_qual="active=true^EQ" reference_qual_condition="active=true^EQ" type="reference"/>
         <element label="Command" mandatory="true" max_length="4000" name="command" type="string"/>
         <element default="100" label="Order" max_length="40" name="order" type="integer"/>
